@@ -1,0 +1,42 @@
+{
+	"name": "@atomicsmash/packages",
+	"private": true,
+	"description": "A monorepo for all of our npm packages.",
+	"homepage": "https://www.atomicsmash.co.uk/",
+	"license": "GPL-3.0-or-later",
+	"author": {
+		"name": "Atomic Smash",
+		"email": "npm@atomicsmash.co.uk",
+		"url": "https://www.atomicsmash.co.uk/"
+	},
+	"workspaces": [
+		"packages/cli",
+		"packages/date-php",
+		"packages/coding-standards"
+	],
+	"scripts": {
+		"dev": "echo \"Please specify a workspace with the -w or --workspace flag followed by the name from the package.json file.\ne.g. npm run dev --workspace @atomicsmash/cli\" && exit 1",
+		"build": "npm run build -ws --if-present",
+		"test": "TZ=\"Europe/Istanbul\" vitest run",
+		"test:ui": "TZ=\"Europe/Istanbul\" vitest --ui",
+		"test:coverage": "TZ=\"Europe/Istanbul\" vitest run --coverage"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.0.3",
+		"@commitlint/config-conventional": "^17.0.3",
+		"@cspell/cspell-types": "^6.18.1",
+		"@vitest/coverage-c8": "^0.26.3",
+		"@vitest/ui": "^0.23.4",
+		"del-cli": "^5.0.0",
+		"eslint": "^8.20.0",
+		"husky": "^8.0.1",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.7.1",
+		"standard-version": "^9.5.0",
+		"vite": "^3.0.4",
+		"vitest": "^0.23.4"
+	},
+	"engines": {
+		"node": ">=18"
+	}
+}

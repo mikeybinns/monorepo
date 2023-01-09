@@ -1,0 +1,3 @@
+{
+	"import": ["node_modules/@atomicsmash/coding-standards/cspell.config.cjs"]
+}

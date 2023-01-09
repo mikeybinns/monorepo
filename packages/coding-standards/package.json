@@ -1,0 +1,36 @@
+{
+	"name": "@atomicsmash/coding-standards",
+	"version": "1.0.0",
+	"description": "A collection of coding standards configurations.",
+	"main": "index.js",
+	"type": "module",
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.31.0",
+		"@typescript-eslint/parser": "^5.31.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-import-resolver-typescript": "^3.3.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-prefer-type-alias": "^0.1.0"
+	},
+	"keywords": [
+		"atomic",
+		"smash",
+		"coding",
+		"standards"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AtomicSmash/packages",
+		"directory": "packages/coding-standards"
+	},
+	"homepage": "https://www.atomicsmash.co.uk/",
+	"license": "GPL-3.0-or-later",
+	"author": {
+		"name": "Atomic Smash",
+		"email": "npm@atomicsmash.co.uk",
+		"url": "https://www.atomicsmash.co.uk/"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

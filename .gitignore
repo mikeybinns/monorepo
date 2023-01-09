@@ -1,0 +1,16 @@
+# npm packages
+node_modules/
+package-lock.json
+
+# Apple File system files
+.DS_Store
+
+# Generated package builds
+packages/*/dist
+packages/*/*.tsbuildinfo
+
+# testing coverage info
+coverage
+
+# CLI package ignores
+packages/cli/src/tests/svg/out/*
