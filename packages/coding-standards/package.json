@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "A collection of coding standards configurations.",
 	"main": "index.js",
+	"types": "index.d.ts",
 	"type": "module",
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.31.0",
