@@ -19,7 +19,9 @@
 		"build": "npm run build -ws --if-present",
 		"test": "TZ=\"Europe/Istanbul\" vitest run",
 		"test:ui": "TZ=\"Europe/Istanbul\" vitest --ui",
-		"test:coverage": "TZ=\"Europe/Istanbul\" vitest run --coverage"
+		"test:coverage": "TZ=\"Europe/Istanbul\" vitest run --coverage",
+		"lint": "run-p lint:*",
+		"lint:eslint": "eslint --cache --cache-location ./node_modules/.cache/eslint . --ext .js,.ts,.jsx,.tsx"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",
