@@ -26,7 +26,6 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",
 		"@commitlint/config-conventional": "^17.0.3",
-		"@cspell/cspell-types": "^6.18.1",
 		"@vitest/coverage-c8": "^0.26.3",
 		"@vitest/ui": "^0.23.4",
 		"del-cli": "^5.0.0",
