@@ -1,1 +1,1 @@
-module.exports = require("@atomicsmash/coding-standards").eslintConfig;
+module.exports = import("@atomicsmash/coding-standards").eslintConfig;
