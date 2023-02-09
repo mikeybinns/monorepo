@@ -1,1 +1,1 @@
-module.exports = require("@atomicsmash/coding-standards").commitlintConfig;
+module.exports = import("@atomicsmash/coding-standards").commitlintConfig;
