@@ -1,22 +1,29 @@
 import { existsSync, unlink, readFileSync } from "node:fs";
+import { resolve as resolvePath, dirname as pathDirname } from "node:path";
+import { fileURLToPath } from "node:url";
 import { expect, test, describe, afterAll } from "vitest";
-import { resolve as resolvePath } from "path";
 import { svgHelpMessage } from "../commands/svg";
-import { mainCommand, execute } from "../utils";
+import { testCommand, execute } from "../utils";
+
+
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const __filename = fileURLToPath(import.meta.url);
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const __dirname = pathDirname(__filename);
 
 const testSVGsIn = resolvePath(__dirname, "./svg/in");
 const testSVGsOut = resolvePath(__dirname, "./svg/out");
 
 describe("SVG command works as intended", () => {
 	test("svg command correctly displays help message", async () => {
-		await expect(execute(`${mainCommand} svg --help`)).resolves.toEqual({
+		await expect(execute(`${testCommand} svg --help`)).resolves.toEqual({
 			error: null,
 			stdout: `${svgHelpMessage}\n`,
 			stderr: "",
 		});
 	});
 	test("svg command correctly displays --in flag missing error if no flags added", async () => {
-		const command = `${mainCommand} svg`;
+		const command = `${testCommand} svg`;
 		await expect(execute(command)).rejects.toEqual({
 			error: new Error(
 				`Command failed: ${command}\nError: You need to provide a value for the --in flag.\n`
@@ -26,7 +33,7 @@ describe("SVG command works as intended", () => {
 		});
 	});
 	test("svg command correctly displays --in flag missing error if in flag is missing", async () => {
-		const command = `${mainCommand} svg --out ${testSVGsOut}`;
+		const command = `${testCommand} svg --out ${testSVGsOut}`;
 		await expect(execute(command)).rejects.toEqual({
 			error: new Error(
 				`Command failed: ${command}\nError: You need to provide a value for the --in flag.\n`
@@ -36,7 +43,7 @@ describe("SVG command works as intended", () => {
 		});
 	});
 	test("svg command correctly displays --out flag missing error if out flag is missing", async () => {
-		const command = `${mainCommand} svg --in ${testSVGsIn}`;
+		const command = `${testCommand} svg --in ${testSVGsIn}`;
 		await expect(execute(command)).rejects.toEqual({
 			error: new Error(
 				`Command failed: ${command}\nError: You need to provide a value for the --out flag.\n`
@@ -46,7 +53,7 @@ describe("SVG command works as intended", () => {
 		});
 	});
 	test("svg command produces the correct svg output", async () => {
-		await execute(`${mainCommand} svg --in ${testSVGsIn} --out ${testSVGsOut}`);
+		await execute(`${testCommand} svg --in ${testSVGsIn} --out ${testSVGsOut}`);
 		expect(existsSync(`${testSVGsOut}/sprite.svg`)).toBe(true);
 		expect(readFileSync(`${testSVGsOut}/sprite.svg`, "utf8")).toBe(
 			// spellchecker: disable-next-line

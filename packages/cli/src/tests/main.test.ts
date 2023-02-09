@@ -1,48 +1,48 @@
 import { expect, test, describe } from "vitest";
 import { execute } from "../utils";
 import { helpMessage, noCommandFound } from "./../messages.js";
-import { mainCommand, packageVersion } from "./../utils.js";
+import { testCommand, packageVersion } from "./../utils.js";
 
 describe.concurrent("Base CLI helpers work as intended", () => {
 	test("main cli shows help message if nothing is added after main command", async () => {
-		await expect(execute(`${mainCommand}`)).resolves.toEqual({
+		await expect(execute(`${testCommand}`)).resolves.toEqual({
 			error: null,
 			stdout: `${helpMessage}\n`,
 			stderr: "",
 		});
 	});
 	test("main cli shows help message if --help is added after main command", async () => {
-		await expect(execute(`${mainCommand} --help`)).resolves.toEqual({
+		await expect(execute(`${testCommand} --help`)).resolves.toEqual({
 			error: null,
 			stdout: `${helpMessage}\n`,
 			stderr: "",
 		});
 	});
 	test("main cli shows help message if -h is added after main command", async () => {
-		await expect(execute(`${mainCommand} -h`)).resolves.toEqual({
+		await expect(execute(`${testCommand} -h`)).resolves.toEqual({
 			error: null,
 			stdout: `${helpMessage}\n`,
 			stderr: "",
 		});
 	});
 	test("main cli shows command not found message if invalid command is provided", async () => {
-		await expect(execute(`${mainCommand} fake-command`)).rejects.toEqual({
+		await expect(execute(`${testCommand} fake-command`)).rejects.toEqual({
 			error: new Error(
-				`Command failed: ${mainCommand} fake-command\n${noCommandFound}\n`
+				`Command failed: ${testCommand} fake-command\n${noCommandFound}\n`
 			),
 			stdout: "",
 			stderr: `${noCommandFound}\n`,
 		});
 	});
 	test("main cli shows correct version number if --version is added after main command", async () => {
-		await expect(execute(`${mainCommand} --version`)).resolves.toEqual({
+		await expect(execute(`${testCommand} --version`)).resolves.toEqual({
 			error: null,
 			stdout: `${packageVersion}\n`,
 			stderr: "",
 		});
 	});
 	test("main cli shows correct version number if -v is added after main command", async () => {
-		await expect(execute(`${mainCommand} -v`)).resolves.toEqual({
+		await expect(execute(`${testCommand} -v`)).resolves.toEqual({
 			error: null,
 			stdout: `${packageVersion}\n`,
 			stderr: "",

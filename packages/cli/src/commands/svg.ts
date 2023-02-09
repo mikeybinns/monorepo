@@ -1,7 +1,6 @@
 import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { resolve as resolvePath, join as joinPath, dirname } from "path";
-import glob from "glob";
-// @ts-expect-error
+import glob from "glob-promise";
 import SVGSpriter from "svg-sprite";
 import File from "vinyl";
 import { hasHelpFlag } from "../utils.js";
@@ -56,13 +55,8 @@ export default function svg(args: string[]) {
 
 	const cwd = resolvePath(inFlag);
 	// Find SVG files recursively via `glob`
-	glob("**/*.svg", { cwd }, async (error, files) => {
-		if (error) {
-			console.error(error.message);
-			throw error;
-		}
-		console.log({ files });
-		await new Promise<void>((resolve, reject) => {
+	glob("**/*.svg", { cwd }).then(async (files) => {
+		await new Promise<void>((resolve) => {
 			files.forEach((file) => {
 				// Create and add a vinyl file instance for each SVG
 				spriter.add(
@@ -78,24 +72,21 @@ export default function svg(args: string[]) {
 			.then(async () => {
 				await spriter
 					.compileAsync()
-					.then((compiledResponse: any) => {
+					.then((compiledResponse: {result: {symbol: Record<string, File>}}) => {
 						const { result } = compiledResponse;
-						for (const type of Object.values<any>(result.symbol)) {
-							mkdirSync(dirname(type.path), { recursive: true });
-							writeFileSync(type.path, type.contents);
+						for (const type of Object.values(result.symbol)) {
+							if (type.contents) {
+								mkdirSync(dirname(type.path), { recursive: true });
+								writeFileSync(type.path, type.contents.toString());
+							}
 						}
-					})
-					.catch((error: any) => {
-						console.error({ error });
-						throw error;
 					});
 			})
 			.then(() => {
 				console.log(`SVG sprite was successfully generated in ${outFlag}.`);
-			})
-			.catch((error) => {
-				console.error({ error });
-				throw error;
 			});
+	}).catch((error: unknown) => {
+		console.error({ error });
+		throw error;
 	});
 }

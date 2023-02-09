@@ -9,6 +9,7 @@ if (packageJson.bin === undefined) {
 	throw new Error("Script name is not defined.");
 }
 export const mainCommand = Object.keys(packageJson.bin)[0];
+export const testCommand = `${process.cwd()}/src/tests/node_modules/.bin/${mainCommand}`
 if (!packageJson.version) {
 	throw new Error("Package has no version number set.");
 }
