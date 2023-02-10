@@ -1,0 +1,7 @@
+{
+	"extends": "./base",
+	"exclude": ["./cypress", "./cypress.config.ts"],
+	"compilerOptions": {
+		"types": ["vitest/globals"]
+	}
+}
