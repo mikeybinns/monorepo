@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true,
+		"lib": ["DOM", "DOM.Iterable", "ES2022"],
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"target": "ES2022",
+		"module": "es2022",
+		"strict": true,
+		"allowJs": true,
+		"forceConsistentCasingInFileNames": true
+	}
+}
