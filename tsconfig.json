@@ -1,0 +1,8 @@
+{
+	"extends": "@atomicsmash/coding-standards/typescript/base",
+	"compilerOptions": {
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true
+	}
+}
