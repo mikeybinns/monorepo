@@ -2,9 +2,6 @@ module.exports = {
 	ignorePatterns: [".eslintrc.cjs", "dist/**/*", "**/*.config.*"],
 	plugins: ["import"],
 	extends: ["eslint:recommended", "prettier"],
-	parserOptions: {
-		ecmaVersion: "9",
-	},
 	env: {
 		browser: true,
 		commonjs: true,
