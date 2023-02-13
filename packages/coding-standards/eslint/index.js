@@ -58,7 +58,6 @@ module.exports = {
 						prefix: ["is", "should", "has", "can", "did", "will"],
 					},
 				],
-				"prefer-type-alias/prefer-type-alias": "error",
 			},
 		},
 	],
