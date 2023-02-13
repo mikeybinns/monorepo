@@ -5,5 +5,11 @@
 		"declaration": true,
 		"declarationMap": true,
 		"noEmit": false
-	}
+	},
+	"files": [],
+	"include": [],
+	"references": [
+		{ "path": "./packages/cli" },
+		{ "path": "./packages/date-php" }
+	]
 }

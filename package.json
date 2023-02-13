@@ -15,8 +15,8 @@
 		"packages/coding-standards"
 	],
 	"scripts": {
-		"dev": "echo \"Please specify a workspace with the -w or --workspace flag followed by the name from the package.json file.\ne.g. npm run dev --workspace @atomicsmash/cli\" && exit 1",
-		"build": "npm run build -ws --if-present",
+		"dev": "tsc -b --watch",
+		"build": "tsc -b",
 		"test": "TZ=\"Europe/Istanbul\" vitest run",
 		"test:ui": "TZ=\"Europe/Istanbul\" vitest --ui",
 		"test:coverage": "TZ=\"Europe/Istanbul\" vitest run --coverage",
