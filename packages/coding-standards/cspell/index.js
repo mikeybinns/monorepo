@@ -4,7 +4,7 @@ const path = require("path");
 /**
  * Search for `package.json`
  * @param {string} from - search `from` directory.
- * @returns {string} - path to package.json
+ * @returns {string|void} - path to package.json
  */
 function findNearestPackageJson(from) {
 	from = path.resolve(from);
@@ -34,7 +34,7 @@ function loadPackage(cwd) {
 function determinePackageNamesAndMethods(cwd = process.cwd()) {
 	const packageImport = loadPackage(cwd) || {};
 	const packageNames = Object.keys(packageImport.dependencies || {}).concat(
-		Object.keys(packageImport.devDependencies || {})
+		Object.keys(packageImport.devDependencies || {}),
 	);
 	return { packageNames };
 }
