@@ -37,7 +37,7 @@ module.exports = {
 		{
 			files: ["*.ts", "*.tsx", "*.mts", "*.cts"],
 			parser: "@typescript-eslint/parser",
-			plugins: ["@typescript-eslint", "prefer-type-alias", "import"],
+			plugins: ["@typescript-eslint", "import"],
 			extends: [
 				"eslint:recommended",
 				"plugin:@typescript-eslint/recommended",
