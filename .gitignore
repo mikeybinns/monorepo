@@ -8,6 +8,7 @@ package-lock.json
 # Generated package builds
 packages/*/dist
 packages/*/*.tsbuildinfo
+tsconfig.tsbuildinfo
 
 # testing coverage info
 coverage
