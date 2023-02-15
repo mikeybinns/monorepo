@@ -114,8 +114,8 @@ describe.concurrent("DatePHP.format()", () => {
 		const date = new DatePHP(1996, 5, 23, 12, 34, 2); // Sunday 23rd June 1996 12:34:02
 		expect(
 			date.format(
-				escapeAllCharacters("dDjlNSwzWFmMntLoYyaABgGhHisuveIOPpTZcrU")
-			)
+				escapeAllCharacters("dDjlNSwzWFmMntLoYyaABgGhHisuveIOPpTZcrU"),
+			),
 		).toBe("dDjlNSwzWFmMntLoYyaABgGhHisuveIOPpTZcrU");
 	});
 	it("checks meridiems work in the morning", () => {
@@ -140,7 +140,7 @@ describe.concurrent("DatePHP.format()", () => {
 		expect(searchFirstUnescaped(escapeAllCharacters("January"), "y")).toBe(-1);
 		// Check replace unescaped a with TEST
 		expect(
-			unslash(replaceAllUnescaped(escapeAllCharacters("January"), "a", "TEST"))
+			unslash(replaceAllUnescaped(escapeAllCharacters("January"), "a", "TEST")),
 		).toBe("January");
 		// Check final result
 		expect(date.format("F")).toBe("January");
@@ -151,40 +151,40 @@ describe.concurrent("DatePHP.parseString()", () => {
 	it("Parses date in Y-m-d\\TH:i:s.vp format", () => {
 		const dateString = "2022-11-21T14:56:34.000Z";
 		expect(
-			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCFullYear()
+			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCFullYear(),
 		).toBe(2022);
 		expect(
-			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCMonth()
+			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCMonth(),
 		).toBe(10);
 		expect(
-			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCDate()
+			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCDate(),
 		).toBe(21);
 		expect(
-			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCHours()
+			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCHours(),
 		).toBe(14);
 		expect(
-			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCMinutes()
+			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCMinutes(),
 		).toBe(56);
 		expect(
-			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCSeconds()
+			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getUTCSeconds(),
 		).toBe(34);
 		expect(
-			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getFullYear()
+			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getFullYear(),
 		).toBe(2022);
 		expect(DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getMonth()).toBe(
-			10
+			10,
 		);
 		expect(DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getDate()).toBe(
-			21
+			21,
 		);
 		expect(DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getHours()).toBe(
-			17
+			17,
 		);
 		expect(
-			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getMinutes()
+			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getMinutes(),
 		).toBe(56);
 		expect(
-			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getSeconds()
+			DatePHP.parseString(dateString, "Y-m-d\\TH:i:s.vp").getSeconds(),
 		).toBe(34);
 	});
 	it("formats and parses a date back into the same date", () => {
@@ -192,8 +192,8 @@ describe.concurrent("DatePHP.parseString()", () => {
 		expect(
 			DatePHP.parseString(
 				date.format("Y-m-d\\TH:i:s.vp"),
-				"Y-m-d\\TH:i:s.vp"
-			).getTime()
+				"Y-m-d\\TH:i:s.vp",
+			).getTime(),
 		).toBe(date.getTime());
 	});
 	it("formats and parses a date in UTC timezone back into the same date", () => {
@@ -201,8 +201,8 @@ describe.concurrent("DatePHP.parseString()", () => {
 		expect(
 			DatePHP.parseString(
 				date.format("Y-m-d\\TH:i:s.vp"),
-				"Y-m-d\\TH:i:s.vp"
-			).getTime()
+				"Y-m-d\\TH:i:s.vp",
+			).getTime(),
 		).toBe(date.getTime());
 	});
 });

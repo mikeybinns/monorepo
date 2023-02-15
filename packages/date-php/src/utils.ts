@@ -25,7 +25,7 @@ export function unslash(string: string) {
 export function replaceAllUnescaped(
 	string: string,
 	searchValue: string,
-	replaceValue: string
+	replaceValue: string,
 ) {
 	let newString = "";
 	let index = 0;
@@ -63,7 +63,7 @@ export function replaceAllUnescaped(
  */
 export function searchFirstUnescaped(
 	string: string,
-	searchValue: string
+	searchValue: string,
 ): number {
 	const splitString = string.split("\\\\");
 	let position = 0;

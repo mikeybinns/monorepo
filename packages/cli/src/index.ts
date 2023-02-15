@@ -25,7 +25,7 @@ switch (commandArg) {
 		try {
 			await import(`./commands/${commandArg}.js`).then(
 				(module: { default(args: string[]): void }) =>
-					module.default(process.argv.slice(3))
+					module.default(process.argv.slice(3)),
 			);
 		} catch (error: unknown) {
 			if (error instanceof Error) {

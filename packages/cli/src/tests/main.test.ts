@@ -28,7 +28,7 @@ describe.concurrent("Base CLI helpers work as intended", () => {
 	test("main cli shows command not found message if invalid command is provided", async () => {
 		await expect(execute(`${testCommand} fake-command`)).rejects.toEqual({
 			error: new Error(
-				`Command failed: ${testCommand} fake-command\n${noCommandFound}\n`
+				`Command failed: ${testCommand} fake-command\n${noCommandFound}\n`,
 			),
 			stdout: "",
 			stderr: `${noCommandFound}\n`,

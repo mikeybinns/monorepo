@@ -79,7 +79,7 @@ export class DatePHP extends Date {
 		// Week
 		if (searchFirstUnescaped(format, "W") !== -1) {
 			console.warn(
-				"The W character is currently not supported. It has not been substituted or removed."
+				"The W character is currently not supported. It has not been substituted or removed.",
 			);
 		}
 		// Month
@@ -87,14 +87,14 @@ export class DatePHP extends Date {
 		format = replaceAllUnescaped(
 			format,
 			"m",
-			(month + 1).toString().padStart(2, "0")
+			(month + 1).toString().padStart(2, "0"),
 		);
 		format = replaceAllUnescaped(format, "M", months[month].slice(0, 6));
 		format = replaceAllUnescaped(format, "n", (month + 1).toString());
 		format = replaceAllUnescaped(
 			format,
 			"t",
-			new Date(year, month + 1, 0).getDate().toString()
+			new Date(year, month + 1, 0).getDate().toString(),
 		);
 		// Year
 		if (new Date(year, 2, 0).getDate() === 29) {
@@ -104,7 +104,7 @@ export class DatePHP extends Date {
 		}
 		if (searchFirstUnescaped(format, "o") !== -1) {
 			console.warn(
-				"The o character is currently not supported. It has not been substituted or removed."
+				"The o character is currently not supported. It has not been substituted or removed.",
 			);
 		}
 		format = replaceAllUnescaped(format, "Y", year.toString());
@@ -120,43 +120,43 @@ export class DatePHP extends Date {
 		format = replaceAllUnescaped(
 			format,
 			"A",
-			escapeAllCharacters(meridiem.toUpperCase())
+			escapeAllCharacters(meridiem.toUpperCase()),
 		);
 		format = replaceAllUnescaped(format, "g", smallHours.toString());
 		format = replaceAllUnescaped(format, "G", hours.toString());
 		format = replaceAllUnescaped(
 			format,
 			"h",
-			smallHours.toString().padStart(2, "0")
+			smallHours.toString().padStart(2, "0"),
 		);
 		format = replaceAllUnescaped(
 			format,
 			"H",
-			hours.toString().padStart(2, "0")
+			hours.toString().padStart(2, "0"),
 		);
 		format = replaceAllUnescaped(
 			format,
 			"i",
-			minutes.toString().padStart(2, "0")
+			minutes.toString().padStart(2, "0"),
 		);
 		format = replaceAllUnescaped(
 			format,
 			"s",
-			seconds.toString().padStart(2, "0")
+			seconds.toString().padStart(2, "0"),
 		);
 		format = replaceAllUnescaped(
 			format,
 			"v",
-			milliseconds.toString().padStart(3, "0")
+			milliseconds.toString().padStart(3, "0"),
 		);
 		if (searchFirstUnescaped(format, "B") !== -1) {
 			console.warn(
-				"The B character is currently not supported. It has not been substituted or removed."
+				"The B character is currently not supported. It has not been substituted or removed.",
 			);
 		}
 		if (searchFirstUnescaped(format, "u") !== -1) {
 			console.warn(
-				"The u character is not supported because of JS Date limitations. It has not been substituted or removed."
+				"The u character is not supported because of JS Date limitations. It has not been substituted or removed.",
 			);
 		}
 		// Timezone
@@ -173,59 +173,59 @@ export class DatePHP extends Date {
 				"O",
 				`${timezoneMinutesOffset < 0 ? "+" : "-"}${Math.abs(exactHourLength)
 					.toString()
-					.padStart(2, "0")}${remainderMinutes.toString().padStart(2, "0")}`
+					.padStart(2, "0")}${remainderMinutes.toString().padStart(2, "0")}`,
 			);
 			format = replaceAllUnescaped(
 				format,
 				"P",
 				`${timezoneMinutesOffset < 0 ? "+" : "-"}${Math.abs(exactHourLength)
 					.toString()
-					.padStart(2, "0")}:${remainderMinutes.toString().padStart(2, "0")}`
+					.padStart(2, "0")}:${remainderMinutes.toString().padStart(2, "0")}`,
 			);
 			format = replaceAllUnescaped(
 				format,
 				"p",
 				`${timezoneMinutesOffset < 0 ? "+" : "-"}${Math.abs(exactHourLength)
 					.toString()
-					.padStart(2, "0")}:${remainderMinutes.toString().padStart(2, "0")}`
+					.padStart(2, "0")}:${remainderMinutes.toString().padStart(2, "0")}`,
 			);
 		}
 
 		if (searchFirstUnescaped(format, "e") !== -1) {
 			console.warn(
-				"The e character is currently not supported. It has not been substituted or removed."
+				"The e character is currently not supported. It has not been substituted or removed.",
 			);
 		}
 		if (searchFirstUnescaped(format, "I") !== -1) {
 			console.warn(
-				"The I character is currently not supported. It has not been substituted or removed."
+				"The I character is currently not supported. It has not been substituted or removed.",
 			);
 		}
 		if (searchFirstUnescaped(format, "T") !== -1) {
 			console.warn(
-				"The T character is currently not supported. It has not been substituted or removed."
+				"The T character is currently not supported. It has not been substituted or removed.",
 			);
 		}
 		if (searchFirstUnescaped(format, "Z") !== -1) {
 			console.warn(
-				"The Z character is currently not supported. It has not been substituted or removed."
+				"The Z character is currently not supported. It has not been substituted or removed.",
 			);
 		}
 		format = replaceAllUnescaped(
 			format,
 			"U",
-			(this.valueOf() / 1000).toString()
+			(this.valueOf() / 1000).toString(),
 		);
 		return unslash(format);
 	}
 
 	static parseString(
 		dateString: string,
-		formatString: "Y-m-d\\TH:i:s.vp" | "ISO-8601"
+		formatString: "Y-m-d\\TH:i:s.vp" | "ISO-8601",
 	) {
 		if (formatString !== "Y-m-d\\TH:i:s.vp" && formatString !== "ISO-8601") {
 			console.error(
-				"parseDateUsingPHPDateFormat: Currently only ISO-8601 is supported."
+				"parseDateUsingPHPDateFormat: Currently only ISO-8601 is supported.",
 			);
 			return new DatePHP();
 		}
@@ -259,7 +259,7 @@ export class DatePHP extends Date {
 		const milliseconds = Number(millisecondsString);
 
 		return new DatePHP(
-			Date.UTC(year, month, day, hours, minutes, seconds, milliseconds)
+			Date.UTC(year, month, day, hours, minutes, seconds, milliseconds),
 		);
 	}
 }
