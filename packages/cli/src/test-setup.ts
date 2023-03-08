@@ -1,4 +1,6 @@
 import { unlink, writeFile } from "node:fs";
+import { resolve as resolvePath, dirname as pathDirname } from "node:path";
+import { fileURLToPath } from "node:url";
 import { execute, packageJson } from "./utils";
 
 const packageName = packageJson.name;
@@ -23,27 +25,38 @@ const packName = `${packageName
 	.replaceAll("@", "")
 	.replaceAll(`/`, "-")}-${packageVersion}.tgz`;
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const __filename = fileURLToPath(import.meta.url);
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const __dirname = pathDirname(__filename);
+
 export async function setup() {
 	console.log("Packing a test version...");
 	await execute(
-		`npm pack --pack-destination ${process.cwd()}/src/tests/artifacts`,
+		`cd ${resolvePath(
+			__dirname,
+			"../",
+		)} && npm pack --pack-destination ${__dirname}/tests/artifacts`,
 	);
 	console.log(`Install test package...`);
-	writeFile("./src/tests/package.json", "{}", (err) => {
-		if (err) throw err;
+	writeFile(`${__dirname}/tests/package.json`, "{}", (err) => {
+		if (err) {
+			console.log("writeFile failed");
+			throw err;
+		}
 	});
 	await execute(
-		`cd src/tests && npm pkg set dependencies.@atomicsmash/cli=file:${process.cwd()}/src/tests/artifacts/${packName} && npm install`,
+		`cd ${__dirname}/tests && npm pkg set dependencies.@atomicsmash/cli=file:${__dirname}/tests/artifacts/${packName} && npm install`,
 	);
 }
 
 export async function teardown() {
 	console.log("Deleting test package...");
-	unlink(`${process.cwd()}/src/tests/artifacts/${packName}`, (err) => {
+	unlink(`${__dirname}/tests/artifacts/${packName}`, (err) => {
 		if (err) throw err;
 	});
 	console.log("Deleting node modules...");
 	await execute(
-		`cd src/tests && rm -rf node_modules package.json package-lock.json`,
+		`cd ${__dirname}/tests && rm -rf node_modules package.json package-lock.json`,
 	);
 }
