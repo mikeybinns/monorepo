@@ -36,7 +36,7 @@ export async function setup() {
 		`cd ${resolvePath(
 			__dirname,
 			"../",
-		)} && npm pack --pack-destination ${__dirname}/tests/artifacts`,
+		)} && ls && npm pack --pack-destination ${__dirname}/tests/artifacts`,
 	);
 	console.log(`Install test package...`);
 	writeFile(`${__dirname}/tests/package.json`, "{}", (err) => {
