@@ -34,6 +34,7 @@ export async function execute(command: string) {
 	}>((resolve, reject) => {
 		exec(command, (error, stdout, stderr) => {
 			if (error) {
+				console.error({ error, stdout, stderr });
 				reject({ error, stdout, stderr });
 			}
 			resolve({ error, stdout, stderr });
