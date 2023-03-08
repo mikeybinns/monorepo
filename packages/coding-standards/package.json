@@ -1,6 +1,6 @@
 {
 	"name": "@atomicsmash/coding-standards",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"description": "A collection of coding standards configurations.",
 	"main": "index.js",
 	"types": "index.d.ts",
