@@ -28,7 +28,8 @@
 		"eslint-plugin-import",
 		"prettier",
 		"@typescript-eslint/eslint-plugin",
-		"@typescript-eslint/parser"
+		"@typescript-eslint/parser",
+		"@atomicsmash/browserslist-config"
 	],
 	"keywords": [
 		"atomic",

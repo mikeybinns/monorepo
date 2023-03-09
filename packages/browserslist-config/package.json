@@ -1,0 +1,30 @@
+{
+	"name": "@atomicsmash/browserslist-config",
+	"version": "0.1.0",
+	"description": "Our shared browserslist config.",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"devDependencies": {
+		"browserslist": "^4.21.5"
+	},
+	"keywords": [
+		"atomic",
+		"smash",
+		"browserslist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AtomicSmash/packages",
+		"directory": "packages/browserslist-config"
+	},
+	"homepage": "https://www.atomicsmash.co.uk/",
+	"license": "GPL-3.0-or-later",
+	"author": {
+		"name": "Atomic Smash",
+		"email": "npm@atomicsmash.co.uk",
+		"url": "https://www.atomicsmash.co.uk/"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

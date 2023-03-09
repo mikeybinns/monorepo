@@ -9,10 +9,14 @@
 		"email": "npm@atomicsmash.co.uk",
 		"url": "https://www.atomicsmash.co.uk/"
 	},
+	"browserslist": [
+		"extends @atomicsmash/browserslist-config"
+	],
 	"workspaces": [
 		"packages/cli",
 		"packages/date-php",
-		"packages/coding-standards"
+		"packages/coding-standards",
+		"packages/browserslist-config"
 	],
 	"scripts": {
 		"dev": "tsc -b --watch",
