@@ -1,13 +1,8 @@
-const eslintConfig = require("@atomicsmash/coding-standards").eslintConfig;
 module.exports = {
-	...eslintConfig,
+	extends: ["@atomicsmash/eslint-config"],
 	parserOptions: {
-		...(eslintConfig.ignorePatterns ?? []),
 		tsconfigRootDir: __dirname,
 		project: ["./tsconfig.json"],
 	},
-	ignorePatterns: [
-		...(eslintConfig.ignorePatterns ?? []),
-		"./packages/__TEMPLATE__/**/*",
-	],
+	ignorePatterns: ["./packages/__TEMPLATE__/**/*"],
 };
