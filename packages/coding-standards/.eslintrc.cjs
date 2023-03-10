@@ -1,5 +1,4 @@
-const eslintConfig = require("@atomicsmash/coding-standards").eslintConfig;
 module.exports = {
-	...eslintConfig,
-	ignorePatterns: [...(eslintConfig.ignorePatterns ?? []), "**/*.d.ts"],
+	extends: ["@atomicsmash/eslint-config"],
+	ignorePatterns: ["**/*.d.ts"],
 };

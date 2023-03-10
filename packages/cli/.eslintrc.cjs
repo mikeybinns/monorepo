@@ -1,5 +1,5 @@
 module.exports = {
-	...require("@atomicsmash/coding-standards").eslintConfig,
+	extends: ["@atomicsmash/eslint-config"],
 	parserOptions: {
 		tsconfigRootDir: __dirname,
 		project: ["./tsconfig.json"],
