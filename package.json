@@ -1,16 +1,20 @@
 {
-	"name": "@atomicsmash/packages",
+	"name": "@mikeybinns/monorepo",
 	"private": true,
-	"description": "A monorepo for all of our npm packages.",
-	"homepage": "https://www.atomicsmash.co.uk/",
+	"description": "A monorepo for all of my npm packages.",
+	"homepage": "https://fastloading.website/",
 	"license": "GPL-3.0-or-later",
 	"author": {
-		"name": "Atomic Smash",
-		"email": "npm@atomicsmash.co.uk",
-		"url": "https://www.atomicsmash.co.uk/"
+		"name": "Mikey Binns",
+		"url": "https://fastloading.website/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mikeybinns/monorepo",
+		"directory": "packages/eslint-config"
 	},
 	"browserslist": [
-		"extends @atomicsmash/browserslist-config"
+		"extends @mikeybinns/browserslist-config"
 	],
 	"workspaces": [
 		"packages/coding-standards",

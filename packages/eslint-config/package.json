@@ -1,22 +1,16 @@
 {
-	"name": "@atomicsmash/eslint-config",
-	"version": "1.0.0",
-	"description": "An ESLint config made by Atomic Smash.",
-	"keywords": [
-		"atomic",
-		"smash",
-		"eslint"
-	],
-	"homepage": "https://www.atomicsmash.co.uk/",
+	"name": "@mikeybinns/eslint-config",
+	"version": "0.1.0",
+	"description": "An ESLint config made by Mikey Binns.",
+	"homepage": "https://fastloading.website/",
 	"license": "GPL-3.0-or-later",
 	"author": {
-		"name": "Atomic Smash",
-		"email": "npm@atomicsmash.co.uk",
-		"url": "https://www.atomicsmash.co.uk/"
+		"name": "Mikey Binns",
+		"url": "https://fastloading.website/"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/AtomicSmash/packages",
+		"url": "https://github.com/mikeybinns/monorepo",
 		"directory": "packages/eslint-config"
 	},
 	"main": "index.js",

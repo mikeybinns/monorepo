@@ -1,6 +1,6 @@
 {
-	"name": "@atomicsmash/coding-standards",
-	"version": "3.0.0",
+	"name": "@mikeybinns/coding-standards",
+	"version": "0.1.0",
 	"description": "A collection of coding standards configurations.",
 	"main": "index.js",
 	"types": "index.d.ts",
@@ -18,26 +18,19 @@
 		"@commitlint/cli",
 		"@commitlint/config-conventional",
 		"prettier",
-		"@atomicsmash/eslint-config",
-		"@atomicsmash/browserslist-config"
+		"@mikeybinns/eslint-config",
+		"@mikeybinns/browserslist-config"
 	],
-	"keywords": [
-		"atomic",
-		"smash",
-		"coding",
-		"standards"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/AtomicSmash/packages",
-		"directory": "packages/coding-standards"
-	},
-	"homepage": "https://www.atomicsmash.co.uk/",
+	"homepage": "https://fastloading.website/",
 	"license": "GPL-3.0-or-later",
 	"author": {
-		"name": "Atomic Smash",
-		"email": "npm@atomicsmash.co.uk",
-		"url": "https://www.atomicsmash.co.uk/"
+		"name": "Mikey Binns",
+		"url": "https://fastloading.website/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mikeybinns/monorepo",
+		"directory": "packages/eslint-config"
 	},
 	"publishConfig": {
 		"access": "public"

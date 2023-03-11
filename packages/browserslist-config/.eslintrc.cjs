@@ -1,4 +1,4 @@
 module.exports = {
-	extends: ["@atomicsmash/eslint-config"],
+	extends: ["@mikeybinns/eslint-config"],
 	ignorePatterns: ["**/*.d.ts"],
 };

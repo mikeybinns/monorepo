@@ -1,1 +1,1 @@
-module.exports = require("@atomicsmash/coding-standards").prettierConfig;
+module.exports = require("@mikeybinns/coding-standards").prettierConfig;

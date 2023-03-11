@@ -44,7 +44,6 @@ const config = {
 	language: "en-GB",
 	words: [
 		...determinePackageNamesAndMethods().packageNames,
-		"atomicsmash",
 		"commitlint",
 		"tsbuildinfo",
 		"sass",

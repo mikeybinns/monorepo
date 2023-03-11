@@ -1,6 +1,6 @@
-# Atomic Smash Packages
+# Mikey Binns Monorepo
 
-This is a monorepo for Atomic Smash packages
+This is a monorepo for my packages
 
 ## To add a package
 

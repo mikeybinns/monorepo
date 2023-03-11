@@ -1,19 +1,18 @@
 {
-	"name": "@atomicsmash/PACKAGE_NAME",
+	"name": "@mikeybinns/PACKAGE_NAME",
 	"version": "0.1.0",
 	"description": "",
 	"keywords": [],
-	"homepage": "https://www.atomicsmash.co.uk/",
+	"homepage": "https://fastloading.website/",
 	"license": "GPL-3.0-or-later",
 	"author": {
-		"name": "Atomic Smash",
-		"email": "npm@atomicsmash.co.uk",
-		"url": "https://www.atomicsmash.co.uk/"
+		"name": "Mikey Binns",
+		"url": "https://fastloading.website/"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/AtomicSmash/packages",
-		"directory": "packages/PACKAGE_FOLDER"
+		"url": "https://github.com/mikeybinns/monorepo",
+		"directory": "packages/eslint-config"
 	},
 	"files": [
 		"./dist/**/*"

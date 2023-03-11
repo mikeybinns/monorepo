@@ -1,28 +1,22 @@
 {
-	"name": "@atomicsmash/browserslist-config",
-	"version": "1.0.0",
-	"description": "Our shared browserslist config.",
+	"name": "@mikeybinns/browserslist-config",
+	"version": "0.1.0",
+	"description": "My shared browserslist config.",
 	"main": "index.js",
 	"types": "index.d.ts",
 	"devDependencies": {
 		"browserslist": "^4.21.5"
 	},
-	"keywords": [
-		"atomic",
-		"smash",
-		"browserslist"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/AtomicSmash/packages",
-		"directory": "packages/browserslist-config"
-	},
-	"homepage": "https://www.atomicsmash.co.uk/",
+	"homepage": "https://fastloading.website/",
 	"license": "GPL-3.0-or-later",
 	"author": {
-		"name": "Atomic Smash",
-		"email": "npm@atomicsmash.co.uk",
-		"url": "https://www.atomicsmash.co.uk/"
+		"name": "Mikey Binns",
+		"url": "https://fastloading.website/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mikeybinns/monorepo",
+		"directory": "packages/eslint-config"
 	},
 	"publishConfig": {
 		"access": "public"
