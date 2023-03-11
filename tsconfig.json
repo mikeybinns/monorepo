@@ -1,5 +1,5 @@
 {
-	"extends": "@atomicsmash/coding-standards/typescript/base-and-vitest",
+	"extends": "@mikeybinns/coding-standards/typescript/base-and-vitest",
 	"compilerOptions": {
 		"composite": true,
 		"declaration": true,
@@ -8,8 +8,5 @@
 	},
 	"files": [],
 	"include": [],
-	"references": [
-		{ "path": "./packages/cli" },
-		{ "path": "./packages/date-php" }
-	]
+	"references": []
 }

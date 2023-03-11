@@ -13,8 +13,6 @@
 		"extends @atomicsmash/browserslist-config"
 	],
 	"workspaces": [
-		"packages/cli",
-		"packages/date-php",
 		"packages/coding-standards",
 		"packages/browserslist-config",
 		"packages/eslint-config"
