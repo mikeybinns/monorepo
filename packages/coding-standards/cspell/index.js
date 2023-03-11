@@ -44,6 +44,7 @@ const config = {
 	language: "en-GB",
 	words: [
 		...determinePackageNamesAndMethods().packageNames,
+		"mikeybinns",
 		"commitlint",
 		"tsbuildinfo",
 		"sass",
