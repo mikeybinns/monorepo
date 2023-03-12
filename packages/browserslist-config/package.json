@@ -16,7 +16,7 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/mikeybinns/monorepo",
-		"directory": "packages/eslint-config"
+		"directory": "packages/browserslist-config"
 	},
 	"publishConfig": {
 		"access": "public"

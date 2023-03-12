@@ -10,8 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mikeybinns/monorepo",
-		"directory": "packages/eslint-config"
+		"url": "https://github.com/mikeybinns/monorepo"
 	},
 	"browserslist": [
 		"extends @mikeybinns/browserslist-config"
