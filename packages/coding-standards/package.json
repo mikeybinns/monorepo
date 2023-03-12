@@ -1,12 +1,12 @@
 {
 	"name": "@mikeybinns/coding-standards",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "A collection of coding standards configurations.",
 	"main": "index.js",
 	"types": "index.d.ts",
 	"dependencies": {
-		"@mikeybinns/browserslist-config": "^0.1.0",
-		"@mikeybinns/eslint-config": "^0.1.0",
+		"@mikeybinns/browserslist-config": "^1.0.0",
+		"@mikeybinns/eslint-config": "^1.0.0",
 		"@commitlint/cli": "^17.0.3",
 		"@commitlint/config-conventional": "^17.0.3",
 		"prettier": "^2.7.1"
