@@ -21,6 +21,7 @@
 		"packages/eslint-config"
 	],
 	"scripts": {
+		"prepare": "husky install",
 		"dev": "tsc -b --watch",
 		"build": "tsc -b",
 		"test": "TZ=\"Europe/Istanbul\" vitest run",
