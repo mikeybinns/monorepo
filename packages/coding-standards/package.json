@@ -14,13 +14,6 @@
 	"devDependencies": {
 		"@cspell/cspell-types": "^6.18.1"
 	},
-	"bundledDependencies": [
-		"@commitlint/cli",
-		"@commitlint/config-conventional",
-		"prettier",
-		"@mikeybinns/eslint-config",
-		"@mikeybinns/browserslist-config"
-	],
 	"homepage": "https://fastloading.website/",
 	"license": "GPL-3.0-or-later",
 	"author": {
