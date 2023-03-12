@@ -1,5 +1,11 @@
 # @mikeybinns/coding-standards
 
+## 1.0.1
+
+### Patch Changes
+
+- [#1](https://github.com/mikeybinns/monorepo/pull/1) [`4536863`](https://github.com/mikeybinns/monorepo/commit/4536863b334140bbd6571d38d5c12c1f21be7d8a) Thanks [@mikeybinns](https://github.com/mikeybinns)! - Update eslint-config version
+
 ## 1.0.0
 
 ### Major Changes
