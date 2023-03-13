@@ -1,5 +1,11 @@
 # @mikeybinns/coding-standards
 
+## 1.1.0
+
+### Minor Changes
+
+- [#5](https://github.com/mikeybinns/monorepo/pull/5) [`8088cff`](https://github.com/mikeybinns/monorepo/commit/8088cff91dac2027cfcf36febb1f83eef820981c) Thanks [@mikeybinns](https://github.com/mikeybinns)! - Update ESLint config package deps
+
 ## 1.0.1
 
 ### Patch Changes
