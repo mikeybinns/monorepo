@@ -1,5 +1,11 @@
 # @mikeybinns/coding-standards
 
+## 1.2.0
+
+### Minor Changes
+
+- [#10](https://github.com/mikeybinns/monorepo/pull/10) [`d90075e`](https://github.com/mikeybinns/monorepo/commit/d90075ead62760605ec2c392f7356c206b4f0a2e) Thanks [@mikeybinns](https://github.com/mikeybinns)! - Update eslint-config dep
+
 ## 1.1.0
 
 ### Minor Changes
