@@ -1,7 +1,11 @@
 module.exports = {
 	ignorePatterns: [".eslintrc.cjs", "dist/**/*", "**/*.config.*"],
 	plugins: ["import"],
-	extends: ["eslint:recommended", "prettier"],
+	extends: [
+		"eslint:recommended",
+		"plugin:eslint-comments/recommended",
+		"prettier",
+	],
 	env: {
 		browser: true,
 		commonjs: true,
@@ -32,6 +36,8 @@ module.exports = {
 		"prefer-const": ["error"],
 		"no-var": ["error"],
 		"import/no-duplicates": "warn",
+		"no-console": ["warn", { allow: ["warn", "error"] }],
+		"eslint-comments/no-unused-disable": "error",
 	},
 	overrides: [
 		{
@@ -42,6 +48,7 @@ module.exports = {
 				"eslint:recommended",
 				"plugin:@typescript-eslint/recommended",
 				"plugin:@typescript-eslint/recommended-requiring-type-checking",
+				"plugin:eslint-comments/recommended",
 				"plugin:import/typescript",
 				"prettier",
 			],
@@ -58,6 +65,7 @@ module.exports = {
 						prefix: ["is", "should", "has", "can", "did", "will"],
 					},
 				],
+				"@typescript-eslint/strict-boolean-expressions": "error",
 			},
 		},
 	],
