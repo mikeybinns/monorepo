@@ -1,5 +1,11 @@
 # @mikeybinns/eslint-config
 
+## 1.1.0
+
+### Minor Changes
+
+- [#3](https://github.com/mikeybinns/monorepo/pull/3) [`b5afabc`](https://github.com/mikeybinns/monorepo/commit/b5afabc7b3ca77c8e36f7d5d2e13f64d94bd7e54) Thanks [@mikeybinns](https://github.com/mikeybinns)! - Add more configs
+
 ## 1.0.1
 
 ### Patch Changes
