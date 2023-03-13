@@ -1,5 +1,11 @@
 # @mikeybinns/eslint-config
 
+## 1.2.0
+
+### Minor Changes
+
+- [#7](https://github.com/mikeybinns/monorepo/pull/7) [`b374226`](https://github.com/mikeybinns/monorepo/commit/b374226edbeef8f987704f2a19089ebc21f32a2f) Thanks [@mikeybinns](https://github.com/mikeybinns)! - Allow more variable cases
+
 ## 1.1.0
 
 ### Minor Changes
